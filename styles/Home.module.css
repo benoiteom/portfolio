@@ -1,0 +1,106 @@
+.main {
+  background-color: black;
+  width: 100%;
+  transition: 1s all;
+}
+
+.card {
+  width: 55%;
+  margin: 0 22.5%;
+  background-color: black;
+  height: 100px;
+  margin-bottom: 20px;
+  background: url("/drone1.png");
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position-y: center;
+  transition: .75s all;
+}
+
+.card:hover {
+  height: 200px;
+  background: url("/drone1.png");
+  background-size: cover;
+  background-position-y: center;
+  cursor: pointer;
+  filter: grayscale(0%) !important;
+}
+
+.blackcard {
+  width: 55%;
+  margin: 0 22.5%;
+  background-color: black;
+  height: 150px;
+  margin-bottom: 20px;
+  transition: .75s all;
+}
+
+.darken {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: .75s all;
+}
+
+.darken:hover {
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cardindex {
+  position: relative;
+  top: 50%;
+  left: -50px;
+  color: white;
+}
+
+.cardlocation {
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 20px 20px;
+  opacity: 1;
+  transition: .75s all;
+  position: relative;
+  top: -16px;
+  left: 0;
+  /* position: relative;
+  top: 5px;
+  left: 20px;
+  color: white; */
+}
+
+.cardlocation:hover {
+  opacity: 0;
+}
+
+.skew {
+  transition: .75s all;
+}
+
+.name {
+  position: sticky;
+  font-size: 72px;
+  color: white;
+  padding: 20px 20px;
+  margin: 0 0;
+  z-index: 5;
+}
+
+.fadebottom {
+  height: 200px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 35%);
+  z-index: 3;
+}
+
+.fadetop {
+  height: 200px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), black 35%);
+  z-index: 4;
+}

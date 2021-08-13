@@ -1,0 +1,104 @@
+.box {
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    position: absolute;
+    top: calc(50vh - 5vw);
+    left: calc(50vw - 5vw);
+    transition: .5s all;
+}
+
+.rhombus {
+    width: 10vw;
+    height: 5vw;
+    background-color: black;
+    position: absolute;
+    top: calc(50vh - 5vw);
+    left: calc(50vw - 5vw);
+    clip-path: polygon(14% 17%,95% 17%,85% 94%,4% 94%);
+    transition: .5s all;
+}
+
+.rectangle {
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    position: absolute;
+    top: calc(50vh - 5vw);
+    left: calc(50vw - 5vw);
+    transition: .5s all;
+}
+
+.mobile_rectangle {
+    display: none;
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    position: absolute;
+    top: calc(50vh - 5vw);
+    left: calc(50vw - 5vw);
+    transition: .5s all;
+}
+
+div.mobile_rectangle > div {
+    opacity: 0;
+    transition: .5s all;
+}
+
+div.mobile_rectangle > div > p {
+    color: white;
+    text-align: center;
+}
+
+.photobox {
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    position: absolute;
+    top: calc(50vh - 5vw);
+    left: calc(50vw - 5vw);
+    transition: .5s all;
+}
+
+.photobox_hover {
+    opacity: 0;
+    width: 100%;
+    height: 12vw;
+    z-index: 7;
+    transition: .5s opacity;
+    position: relative;
+    top: -12vw;
+    left: 0;
+}
+
+.photobox_hover:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+div.photobox > p {
+    z-index: 6;
+    opacity: 0;
+    margin: 0 0;
+    font-size: 1.1vw;
+    line-height: 12vw;
+    text-align: center;
+    color: white;
+    transition: .5s opacity;
+}
+
+div.photobox > p:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .photobox {
+        display: none;
+    }
+    .rectangle {
+        display: none;
+    }
+    .mobile_rectangle {
+        display: block;
+    }
+}

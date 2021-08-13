@@ -1,0 +1,209 @@
+.header0 {
+    top: 8vw;
+    left: 10vw;
+}
+
+.header1 {
+    top: 8vw;
+    left: 20vw;
+}
+
+.header2 {
+    top: 8vw;
+    left: 30vw;
+}
+
+.header3 {
+    top: 8vw;
+    left: 40vw;
+}
+
+.portfolio0 {
+    top: 20vw;
+    left: 10vw;
+    z-index: 12;
+}
+
+.portfolio1 {
+    top: 20vw;
+    left: 18vw;
+    z-index: 12;
+}
+
+.sidebar0 {
+    top: 0;
+    left: 90vw;
+    height: 34vh;
+}
+
+.sidebar1 {
+    top: 0;
+    left: 80vw;
+    height: 34vh;
+}
+
+.sidebar2 {
+    top: 33vh;
+    left: 90vw;
+    height: 34vh;
+}
+
+.sidebar3 {
+    top: 33vh;
+    left: 80vw;
+    height: 34vh;
+}
+
+.sidebar4 {
+    top: 67vh;
+    left: 90vw;
+    height: 33vh;
+}
+
+.sidebar5 {
+    top: 67vh;
+    left: 80vw;
+    height: 33vh;
+}
+
+.photo0 {
+    top: 60vh;
+    left: 10vw;
+    width: 12vw;
+    height: 12vw;
+}
+
+.photo1 {
+    top: 60vh;
+    left: 26vw;
+    width: 12vw;
+    height: 12vw;
+}
+
+.photo2 {
+    top: 60vh;
+    left: 42vw;
+    width: 12vw;
+    height: 12vw;
+}
+
+.portfolio {
+    color: black;
+    position: absolute;
+    font-size: 2vw;
+    font-weight: 400;
+    top: 5.2vh;
+    left: 14.25vw;
+    line-height: 5vw;
+    margin: 0 0;
+    opacity: 0;
+    z-index: 14;
+    transition: .5s all;
+    margin-top: 5px;
+}
+
+.back {
+    color: white;
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight: 400;
+    top: 60px;
+    right: 120px;
+    margin: 0 0;
+    opacity: 0;
+    z-index: 14;
+    transition: .5s all;
+    margin-top: 5px;
+    padding: 10px 10px;
+    background-color: black;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.show_image {
+    opacity: 0;
+    transition: .5s all;
+    max-width: 90%;
+    max-height: 90%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    z-index: 25;
+}
+
+.image {
+    height: 20vh;
+    flex-grow: 1;
+    z-index: 8;
+    padding: 20px 20px;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.x {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    color: white;
+    z-index: 25;
+    opacity: 0;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 7px 18px;
+    background-color: black;
+}
+
+.left {
+    position: absolute;
+    top: calc(50vh - 47px);
+    left: 60px;
+    color: white;
+    z-index: 26;
+    opacity: 0;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 7px 10px;
+    background-color: black;
+    transition: .5s all;
+}
+
+.right {
+    position: absolute;
+    top: calc(50vh - 47px);
+    right: 60px;
+    color: white;
+    z-index: 26;
+    opacity: 0;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 7px 10px;
+    background-color: black;
+    transition: .5s all;
+}
+
+.right:hover {
+    cursor: pointer;
+    right: 50px;
+}
+
+.left:hover {
+    cursor: pointer;
+    left: 50px;
+}
+
+.x:hover {
+    cursor: pointer;
+}
