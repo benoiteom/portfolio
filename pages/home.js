@@ -166,8 +166,9 @@ class Home extends React.Component {
 	}
 
     about_me = () => {
-        if (this.state.card == 'equipment') {
+        if (this.state.card == 'equipment' || this.state.card == 'contact') {
             document.getElementById('equipment').style.opacity = '0';
+            document.getElementById('contact').style.opacity = '0';
 
             setTimeout(() => {
                 document.getElementById('about_me').style.opacity = '1';
@@ -183,8 +184,9 @@ class Home extends React.Component {
     }
 
 	equipment = () => {
-		if (this.state.card == 'about') {
+		if (this.state.card == 'about' || this.state.card == 'contact') {
             document.getElementById('about_me').style.opacity = '0';
+            document.getElementById('contact').style.opacity = '0';
 
             setTimeout(() => {
                 document.getElementById('equipment').style.opacity = '1';
@@ -197,6 +199,24 @@ class Home extends React.Component {
             }, 1200);
         }
         this.setState({card: 'equipment'})
+	}
+
+    contact = () => {
+		if (this.state.card == 'about' || this.state.card == 'equipment') {
+            document.getElementById('about_me').style.opacity = '0';
+            document.getElementById('equipment').style.opacity = '0';
+
+            setTimeout(() => {
+                document.getElementById('contact').style.opacity = '1';
+            }, 500);
+        } else {
+            this.menu_open();
+            
+            setTimeout(() => {
+                document.getElementById('contact').style.opacity = '1';
+            }, 1200);
+        }
+        this.setState({card: 'contact'})
 	}
 
 	menu_open = () => {
@@ -236,6 +256,7 @@ class Home extends React.Component {
     menu_close = () => {
         document.getElementById('about_me').style.opacity = '0';
         document.getElementById('equipment').style.opacity = '0';
+        document.getElementById('contact').style.opacity = '0';
 
         setTimeout(() => {
 			document.getElementById('header').style.top = '8vw';
@@ -305,8 +326,9 @@ class Home extends React.Component {
 							<div id="sidebar4" className={shapes.rectangle} />
 							<div id="sidebar5" className={shapes.rectangle} />
 							<div id="menu" className={styles.menu}>
-                                <p onClick={this.about_me} style={{ top: '8vw' }}>About Me</p>
-								<p onClick={this.equipment} style={{ top: '20vw' }}>Equipment</p>
+                                <p onClick={this.about_me} style={{ top: '6vw' }}>About Me</p>
+								<p onClick={this.equipment} style={{ top: '16vw' }}>Equipment</p>
+								<p onClick={this.contact} style={{ bottom: '8vw' }}>Contact Me</p>
 							</div>
 						</div>
 						<div>
@@ -327,8 +349,7 @@ class Home extends React.Component {
                     <div id="about_me" className={styles.card}>
                         <p onClick={this.menu_close} className={styles.close}><b>close</b></p>
                         <p style={{color: 'white'}}>Hello! I'm Benoit</p>
-                        <p style={{color: 'white'}}>I am a software engineer who enjoys taking pictures and making websites in my free time. 
-                        You can find me on Instagram at <i>"coming soon"</i> or email me at "bortalomagne@gmail.com". 
+                        <p style={{color: 'white'}}>I am a software engineer who enjoys taking pictures, flying my FPV drone, and making websites in my free time. 
                         Thanks for checking out my website!</p>
                     </div>
                     <div id="equipment" className={styles.card}>
@@ -336,6 +357,13 @@ class Home extends React.Component {
                         <p style={{color: 'white'}}>What I use</p>
                         <p style={{color: 'white'}}>I have a Fujifilm X-T3 for most of my shots but also pilot a DJI fpv drone to capture 
                         videos and images from the air.</p>
+                    </div>
+                    <div id="contact" className={styles.card} style={{opacity: 0, zIndex: '100'}}>
+                        <p onClick={this.menu_close} className={styles.close}><b>close</b></p>
+                        <p style={{color: 'white'}}>Contact Me</p>
+                        <p style={{color: 'white'}}>I'd love to get in touch about photoshoots, drone video opportunities, my photos, or 
+                        anything else you have in mind. You can email me at "bortalomagne@gmail.com" or dm me on instagram at <a target="_blank" href="https://www.instagram.com/benoiteom/" style={{textDecoration: 'none'}}>"@benoiteom"</a>. 
+                        I look forward to hearing from you!</p>
                     </div>
 					<div id="mobile_cover" style={{backgroundColor: 'black', opacity: 0, height: '15px', width: '80vw', position: 'absolute', top: '53vw', left: '10vw', zIndex: 50}} />
 					<div id="mobile_rectangle" className={shapes.mobile_rectangle} style={{overflow: 'scroll', paddingTop: '10px'}}>
